@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Packages - Holiday Shores</title>
+    <link rel="stylesheet" href="webtest2.css">
+    <style>
+        /* Specific Styles for the All Packages Grid */
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .back-link {
+            display: inline-block;
+            padding: 1rem 2rem;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Ensuring card images have a consistent height */
+        .card .image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px 8px 0 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="webtest1.html" class="logo">Holiday Shores</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+            <nav class="nav-links" id="navLinks">
+                <a href="why.html" id="nav-why">Why Us</a>
+                <a href="book.html" id="nav-book">Book</a>
+                <a href="transportations.html" id="nav-transportations">Transportations</a>
+            </nav>
+            <div class="user-actions">
+                <select class="language-selector" id="languageSelector" aria-label="Select language">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                </select>
+                <button class="btn-signin" onclick="alert('Sign In page coming soon!')">
+                    <span id="signin-text">Sign In</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <a href="webtest1.html" class="back-link" id="back-link">← Back to Home</a>
+        
+        <section class="packages" id="packages">
+            <h2 id="packages-title" style="text-align: center; margin-top: 1rem;">All Holiday Packages</h2>
+            
+            <div class="packages-grid">
+                <article class="card">
+                    <div class="image summer" role="img" aria-label="Summer vacation"></div>
+                    <h3 id="offer1-title">Summer Escape</h3>
+                    <p id="offer1-location">Bali, Indonesia</p>
+                    <button class="btn" id="offer1-btn" onclick="window.location.href='package-detail.html'">View Details</button>
+                </article>
+
+                <article class="card">
+                    <div class="image mountain" role="img" aria-label="Mountain vacation"></div>
+                    <h3 id="offer2-title">Mountain Hike</h3>
+                    <p id="offer2-location">Swiss Alps</p>
+                    <button class="btn" id="offer2-btn" onclick="alert('Swiss Alps - 5 days of breathtaking mountain views with guided hiking tours included!\n\nClick OK to book now!'); window.location.href='book.html'">View Details</button>
+                </article>
+
+                <article class="card">
+                    <div class="image cruise" role="img" aria-label="Cruise vacation"></div>
+                    <h3 id="offer3-title">Ocean Cruise</h3>
+                    <p id="offer3-location">Caribbean Sea</p>
+                    <button class="btn" id="offer3-btn" onclick="alert('Caribbean Sea - 10 days of luxury cruising with stops at 5 beautiful islands!\n\nClick OK to book now!'); window.location.href='book.html'">View Details</button>
+                </article>
+
+                <article class="card">
+                    <div class="image beach" role="img" aria-label="Beach vacation"></div>
+                    <h3 id="offer4-title">Beach Paradise</h3>
+                    <p id="offer4-location">Maldives</p>
+                    <button class="btn" id="offer4-btn" onclick="alert('Maldives - 7 days in an overwater bungalow with crystal clear waters and spa treatments!\n\nClick OK to book now!'); window.location.href='book.html'">View Details</button>
+                </article>
+
+                <article class="card">
+                    <div class="image winter" role="img" aria-label="Ski vacation"></div>
+                    <h3 id="offer5-title">Winter Ski</h3>
+                    <p id="offer5-location">Japan</p>
+                    <button class="btn" id="offer5-btn" onclick="alert('Japan - 7 days of world-class skiing in Hokkaido with traditional onsen experiences!\n\nClick OK to book now!'); window.location.href='book.html'">View Details</button>
+                </article>
+
+                <article class="card">
+                    <div class="image hotel" role="img" aria-label="Luxury hotel stay"></div>
+                    <h3 id="offer6-title">Luxury Hotel Stay</h3>
+                    <p id="offer6-location">Paris, France</p>
+                    <button class="btn" id="offer6-btn" onclick="alert('Paris, France - 5 days of indulgent luxury in the heart of the City of Light!\n\nClick OK to book now!'); window.location.href='book.html'">View Details</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Holiday Shores | <a href="p1">Contact</a> | <a href="p2">Follow Us</a></p>
+        <img src="footerimage.png" alt="Footer Image">
+    </footer>
+
+    <script src="webtest3.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Us - Holiday Shores</title>
+    <link rel="stylesheet" href="webtest2.css">
+    <style>
+        /* --- Page Specific Styles --- */
+        .why-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .why-content h2 {
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+        }
+        /* Style for the individual benefit cards */
+        .why-item {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .why-item h3 {
+            color: var(--secondary-blue);
+            margin-bottom: 0.5rem;
+        }
+        .back-link {
+            display: inline-block;
+            padding: 1rem 2rem;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="webtest1.html" class="logo">Holiday Shores</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+            <nav class="nav-links" id="navLinks">
+                <a href="why.html" id="nav-why">Why Us</a>
+                <a href="book.html" id="nav-book">Book</a>
+                <a href="transportations.html" id="nav-transportations">Transportations</a>
+            </nav>
+            <div class="user-actions">
+                <select class="language-selector" id="languageSelector" aria-label="Select language">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                </select>
+                <button class="btn-signin" onclick="alert('Sign In page coming soon!')"><span id="signin-text">Sign In</span></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <a href="webtest1.html" class="back-link" id="back-link">← Back to Home</a>
+        
+        <div class="why-content">
+            <h2 id="why-title">Why Choose Holiday Shores?</h2>
+            
+            <div class="why-item">
+                <h3 id="why-best-prices">💰 Best Prices Guaranteed</h3>
+                <p id="why-best-prices-desc">We offer luxury holidays at unbeatable prices. Our price match guarantee ensures you always get the best deal.</p>
+            </div>
+            
+            <div class="why-item">
+                <h3 id="why-book-anywhere">📱 Book Anywhere, Anytime</h3>
+                <p id="why-book-anywhere-desc">Our mobile-friendly platform lets you browse and book your perfect vacation from any device - phone, tablet, or computer.</p>
+            </div>
+            
+            <div class="why-item">
+                <h3 id="why-all-inclusive">✈️ All-Inclusive Packages</h3>
+                <p id="why-all-inclusive-desc">Everything is included in one price: flights, hotels, meals, and activities. No hidden fees, no surprises.</p>
+            </div>
+            
+            <div class="why-item">
+                <h3 id="why-trusted">🛡️ Trusted by Thousands</h3>
+                <p id="why-trusted-desc">Over 50,000 happy customers have booked their dream vacations with us. Join the Holiday Shores family today!</p>
+            </div>
+            
+            <div class="why-item">
+                <h3 id="why-support">🌟 24/7 Customer Support</h3>
+                <p id="why-support-desc">Our dedicated support team is available around the clock to assist you with any questions or concerns.</p>
+            </div>
+            
+            <div class="why-item">
+                <h3 id="why-secure">🔒 Secure Booking</h3>
+                <p id="why-secure-desc">Your personal information and payments are protected with industry-leading security measures.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Holiday Shores | <a href="p1">Contact</a> | <a href="p2">Follow Us</a></p>
+        <img src="footerimage.png" alt="Footer Image">
+    </footer>
+
+    <script src="webtest3.js"></script>
+</body>
+</html>

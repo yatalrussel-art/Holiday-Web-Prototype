@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now - Holiday Shores</title>
+    <link rel="stylesheet" href="webtest2.css">
+    <style>
+        /* --- Booking Form Specific Styles --- */
+        .booking-form {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .booking-form h2 {
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: var(--text-color);
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary-blue);
+        }
+        .back-link {
+            display: inline-block;
+            padding: 1rem 2rem;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        /* Promo Banner inside the form */
+        .promo-note {
+            background: #e6f3ff;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .promo-note strong {
+            color: var(--primary-blue);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="webtest1.html" class="logo">Holiday Shores</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+            <nav class="nav-links" id="navLinks">
+                <a href="why.html" id="nav-why">Why Us</a>
+                <a href="book.html" id="nav-book">Book</a>
+                <a href="transportations.html" id="nav-transportations">Transportations</a>
+            </nav>
+            <div class="user-actions">
+                <select class="language-selector" id="languageSelector" aria-label="Select language">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                </select>
+                <button class="btn-signin" onclick="alert('Sign In page coming soon!')"><span id="signin-text">Sign In</span></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <a href="webtest1.html" class="back-link" id="back-link">← Back to Home</a>
+        
+        <div class="booking-form">
+            <h2 id="book-title">Book Your Dream Vacation</h2>
+            
+            <div class="promo-note">
+                <p id="promo-text">🎉 Use code <strong>HOLIDAY15</strong> for 15% off!</p>
+            </div>
+            
+            <form onsubmit="alert('Thank you for your booking request! We will contact you shortly.'); return false;">
+                <div class="form-group">
+                    <label for="name" id="label-name">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" id="label-email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone" id="label-phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                </div>
+                
+                <div class="form-group">
+                    <label for="destination" id="label-destination">Select Destination</label>
+                    <select id="destination" name="destination" required>
+                        <option value="">Choose a destination...</option>
+                        <option value="bali">Bali, Indonesia - Summer Escape</option>
+                        <option value="swiss">Swiss Alps - Mountain Hike</option>
+                        <option value="caribbean">Caribbean Sea - Ocean Cruise</option>
+                        <option value="maldives">Maldives - Beach Paradise</option>
+                        <option value="japan">Japan - Winter Ski</option>
+                        <option value="seychelles">Seychelles - Paradise Cruise</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date" id="label-date">Preferred Travel Date</label>
+                    <input type="date" id="date" name="date" required min="2026-05-03">
+                </div>
+                
+                <div class="form-group">
+                    <label for="guests" id="label-guests">Number of Guests</label>
+                    <select id="guests" name="guests" required>
+                        <option value="">Select number of guests...</option>
+                        <option value="1">1 Guest</option>
+                        <option value="2">2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4 Guests</option>
+                        <option value="5+">5+ Guests</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="promo" id="label-promo">Promo Code (Optional)</label>
+                    <input type="text" id="promo" name="promo" placeholder="Enter promo code">
+                </div>
+                
+                <div class="form-group">
+                    <label for="notes" id="label-notes">Special Requests (Optional)</label>
+                    <textarea id="notes" name="notes" rows="4" placeholder="Any special requests or requirements?"></textarea>
+                </div>
+                
+                <button type="submit" class="btn-primary" style="width: 100%;" id="confirm-booking">Confirm Booking</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Holiday Shores | <a href="p1">Contact</a> | <a href="p2">Follow Us</a></p>
+        <img src="footerimage.png" alt="Footer Image">
+    </footer>
+
+    <script src="webtest3.js"></script>
+</body>
+</html>

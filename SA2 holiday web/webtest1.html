@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday Shores</title>
+    <link rel="stylesheet" href="webtest2.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="webtest1.html" class="logo">Holiday Shores</a>
+            <button class="menu-toggle" id="menuToggle"aria-label="Toggle navigation">☰</button>
+            <nav class="nav-links" id="navLinks">
+                <a href="why.html" id="nav-why">Why Us</a>
+                <a href="book.html" id="nav-book">Book</a>
+                <a href="transportations.html" id="nav-transportations">Transportations</a>
+            </nav>
+            <div class="user-actions">
+                <select class="language-selector" id="languageSelector" aria-label="Select language">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                </select>
+                <button class="btn-signin" onclick="alert('Sign In page coming soon!')"><span id="signin-text">Sign In</span></button>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h1 id="hero-title">Your Perfect Holiday Awaits</h1>
+            <p id="hero-subtitle">Affordable luxury trips to amazing destinations</p>
+            <button class="btn-primary" onclick="window.location.href='packages.html'" id="view-packages-btn">View Packages</button>
+        </section>
+
+        <section class="packages" id="packages">
+            <h2 id="packages-title">Holiday Packages</h2>
+            <div class="grid">
+                <article class="card">
+                    <video autoplay muted loop class="image summer" role="img" aria-label="Summer vacation">
+                        <source src="summ.mp4" type="video/mp4">
+                    </video>
+                    <h3 id="card1-title">Summer Escape</h3>
+                    <p id="card1-location">Bali, Indonesia</p>
+                    <button class="btn" id="offer1-btn" onclick="window.location.href='package-detail.html'"><span id="view-details-btn">View Details</span></button>
+                </article>
+
+                <article class="card">
+                    <video autoplay muted loop class="image winter" role="img" aria-label="Winter vacation">
+                        <source src="hike.mp4" type="video/mp4">
+                    </video>
+                    <h3 id="card2-title">Mountain Hike</h3>
+                    <p id="card2-location">Swiss Alps</p>
+                    <button class="btn" onclick="alert('Coming Soon!')"><span id="view-details-btn-2">View Details</span></button>
+                </article>
+
+                <article class="card">
+                    <video autoplay muted loop class="image cruise" role="img" aria-label="Cruise vacation">
+                        <source src="boat.mp4" type="video/mp4">
+                    </video>
+                    <h3 id="card3-title">Ocean Cruise</h3>
+                    <p id="card3-location">Caribbean Sea</p>
+                    <button class="btn" onclick="alert('Coming Soon!')"><span id="view-details-btn-3">View Details</span></button>
+                </article>
+            </div>
+        </section>
+
+        <section class="why" id="why">
+            <h2 id="why-title">Why Holiday Shores?</h2>
+            <div class="grid">
+                <div class="box">
+                    <span>💰</span>
+                    <h3 id="why1-title">Best Prices</h3>
+                    <p id="why1-desc">Luxury holidays at unbeatable value</p>
+                    <button class="btn" id="why1-btn" onclick="alert('We guarantee the best prices on all our luxury holiday packages. Price match available!')">Learn More</button>
+                </div>
+                <div class="box">
+                    <span>📱</span>
+                    <h3 id="why2-title">All Devices</h3>
+                    <p id="why2-desc">Browse mobile, book anywhere</p>
+                    <button class="btn" id="why2-btn" onclick="alert('Our website is fully responsive - browse and book on any device!')">Learn More</button>
+                </div>
+                <div class="box">
+                    <span>✈️</span>
+                    <h3 id="why3-title">All-In</h3>
+                    <p id="why3-desc">Flights, hotels & meals included</p>
+                    <button class="btn" id="why3-btn" onclick="alert('All-inclusive packages mean no hidden costs - everything is covered!')">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta" id="book">
+            <h2 id="cta-title">Get 15% Off - Code: <strong>HOLIDAY15</strong></h2>
+            <button class="btn-primary" onclick="window.location.href='book.html'" id="book-now-btn">Book Package</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Holiday Shores | <a href="p1">Contact</a> | <a href="p2">Follow Us</a></p>
+        <img src="footerimage.png" alt="Footer Image">
+    </footer>
+
+    <script>
+        // Handles language switching, content updates, and persisting the choice to local storage
+        const translations = {
+            en: {
+                'signin-text': 'Sign In',
+                'hero-title': 'Your Perfect Holiday Awaits',
+                'hero-subtitle': 'Affordable luxury trips to amazing destinations',
+                'view-packages-btn': 'View Packages',
+                'packages-title': 'Holiday Packages',
+                'card1-title': 'Summer Escape',
+                'card1-location': 'Bali, Indonesia',
+                'card2-title': 'Mountain Hike',
+                'card2-location': 'Swiss Alps',
+                'card3-title': 'Ocean Cruise',
+                'card3-location': 'Caribbean Sea',
+                'view-details-btn': 'View Details',
+                'view-details-btn-2': 'View Details',
+                'view-details-btn-3': 'View Details',
+                'why1-btn': 'Learn More',
+                'why2-btn': 'Learn More',
+                'why3-btn': 'Learn More',
+                'why-title': 'Why Holiday Shores?',
+                'why1-title': 'Best Prices',
+                'why1-desc': 'Luxury holidays at unbeatable value',
+                'why2-title': 'All Devices',
+                'why2-desc': 'Browse mobile, book anywhere',
+                'why3-title': 'All-In',
+                'why3-desc': 'Flights, hotels & meals included',
+                'cta-title': 'Get 15% Off - Code: HOLIDAY15',
+                'book-now-btn': 'Book Now'
+            },
+            es: {
+                'signin-text': 'Iniciar Sesión',
+                'hero-title': 'Tus Vacaciones Perfectas Esperan',
+                'hero-subtitle': 'Viajes de lujo asequibles a destinos increíbles',
+                'view-packages-btn': 'Ver Paquetes',
+                'packages-title': 'Paquetes de Vacaciones',
+                'card1-title': 'Escape de Verano',
+                'card1-location': 'Bali, Indonesia',
+                'card2-title': 'Caminata de Montaña',
+                'card2-location': 'Alpes Suizos',
+                'card3-title': 'Crucero Océano',
+                'card3-location': 'Mar Caribeño',
+                'view-details-btn': 'Ver Detalles',
+                'view-details-btn-2': 'Ver Detalles',
+                'view-details-btn-3': 'Ver Detalles',
+                'why1-btn': 'Más información',
+                'why2-btn': 'Más información',
+                'why3-btn': 'Más información',
+                'why-title': '¿Por Qué Holiday Shores?',
+                'why1-title': 'Mejores Precios',
+                'why1-desc': 'Vacaciones de lujo a valor inmejorable',
+                'why2-title': 'Todos los Dispositivos',
+                'why2-desc': 'Navega móvil, reserva en cualquier lugar',
+                'why3-title': 'Todo Incluido',
+                'why3-desc': 'Vuelos, hoteles y comidas incluidas',
+                'cta-title': 'Obtén 15% de Descuento - Código: HOLIDAY15',
+                'book-now-btn': 'Reservar Ahora'
+            },
+            fr: {
+                'signin-text': 'Connexion',
+                'hero-title': 'Vos Vacances Parfaites Vous Attendent',
+                'hero-subtitle': 'Voyages de luxe abordables vers des destinations incroyables',
+                'view-packages-btn': 'Voir les Forfaits',
+                'packages-title': 'Forfaits de Vacances',
+                'card1-title': 'Échappée Estivale',
+                'card1-location': 'Bali, Indonésie',
+                'card2-title': 'Randonnée Montagne',
+                'card2-location': 'Alpes Suisses',
+                'card3-title': 'Croisière Océan',
+                'card3-location': 'Mer des Caraïbes',
+                'view-details-btn': 'Voir les Détails',
+                'view-details-btn-2': 'Voir les Détails',
+                'view-details-btn-3': 'Voir les Détails',
+                'why1-btn': 'En savoir plus',
+                'why2-btn': 'En savoir plus',
+                'why3-btn': 'En savoir plus',
+                'why-title': 'Pourquoi Holiday Shores?',
+                'why1-title': 'Meilleur Prix',
+                'why1-desc': 'Vacances de luxe à une valeur imbattable',
+                'why2-title': 'Tous Appareils',
+                'why2-desc': 'Parcourez mobile, réservez n\'importe où',
+                'why3-title': 'Tout Inclus',
+                'why3-desc': 'Vols, hôtels et repas inclus',
+                'cta-title': 'Obtenez 15% de Réduction - Code: HOLIDAY15',
+                'book-now-btn': 'Réserver Maintenant'
+            },
+            de: {
+                'signin-text': 'Anmelden',
+                'hero-title': 'Dein Perfekter Urlaub Wartet',
+                'hero-subtitle': 'Erschwingliche Luxusreisen zu erstaunlichen Zielen',
+                'view-packages-btn': 'Pakete Ansehen',
+                'packages-title': 'Urlaubspakete',
+                'card1-title': 'Sommerausflug',
+                'card1-location': 'Bali, Indonesien',
+                'card2-title': 'Bergwanderung',
+                'card2-location': 'Schweizer Alpen',
+                'card3-title': 'Ozeankreuzfahrt',
+                'card3-location': 'Karibisches Meer',
+                'view-details-btn': 'Details Ansehen',
+                'view-details-btn-2': 'Details Ansehen',
+                'view-details-btn-3': 'Details Ansehen',
+                'why1-btn': 'Mehr Erfahren',
+                'why2-btn': 'Mehr Erfahren',
+                'why3-btn': 'Mehr Erfahren',
+                'why-title': 'Warum Holiday Shores?',
+                'why1-title': 'Beste Preise',
+                'why1-desc': 'Luxusurlaub zu unschlagbarem Wert',
+                'why2-title': 'Alle Geräte',
+                'why2-desc': 'Mobil durchsuchen, überall buchen',
+                'why3-title': 'All-Inklusive',
+                'why3-desc': 'Flüge, Hotels und Mahlzeiten inbegriffen',
+                'cta-title': 'Erhalten Sie 15% Rabatt - Code: HOLIDAY15',
+                'book-now-btn': 'Jetzt Buchen'
+            }
+        };
+
+        // Logic to swap language content based on selection
+        function changeLanguage(lang) {
+            const navLinks = document.querySelectorAll('nav.nav-links a');
+            navLinks[0].textContent = lang === 'en' ? 'Why Us' : lang === 'es' ? 'Por Qué Nosotros' : lang === 'fr' ? 'Pourquoi Nous' : 'Warum Wir';
+            navLinks[1].textContent = lang === 'en' ? 'Book' : lang === 'es' ? 'Reservar' : lang === 'fr' ? 'Réserver' : 'Buchen';
+            navLinks[2].textContent = lang === 'en' ? 'Transportations' : lang === 'es' ? 'Transportes' : lang === 'fr' ? 'Transports' : 'Transporte';
+
+            for (const [key, value] of Object.entries(translations[lang])) {
+                const element = document.getElementById(key);
+                if (element) {
+                    element.textContent = value;
+                }
+            }
+            // Persist language choice in browser storage
+            localStorage.setItem('selectedLanguage', lang);
+        }
+          // ---------------- MENU TOGGLE ----------------
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.getElementById('navLinks');
+
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            });
+
+        // Event listener for initial page load and user interaction
+        window.addEventListener('DOMContentLoaded', function () {
+            const languageSelector = document.getElementById('languageSelector');
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+            languageSelector.value = savedLanguage;
+            changeLanguage(savedLanguage);
+
+            languageSelector.addEventListener('change', function () {
+                changeLanguage(this.value);
+            });
+        });
+    </script>
+</body>
+
+</html>

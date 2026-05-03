@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bali Summer Escape - Holiday Shores</title>
+    <link rel="stylesheet" href="webtest2.css">
+    <style>
+        /* Specific styles for the Package Detail view */
+        .package-hero {
+            padding: 4rem 2rem;
+            /* Use primary blue for the banner background */
+            background: var(--primary-blue);
+            text-align: center;
+            /* Ensure text is white for contrast */
+            color: white;
+        }
+
+        .package-hero h1 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .package-hero p {
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto 1.5rem auto;
+        }
+
+        .package-meta {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* Updated spans with white outline */
+        .package-meta span {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+
+        .package-grid {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        /* Sidebar box for price and booking */
+        aside.package-summary {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+        }
+
+        .price {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .package-video {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .package-carousel {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .package-carousel img {
+            width: 50%;
+            border-radius: 8px;
+            object-fit: cover;
+            height: 200px;
+        }
+
+        .package-itinerary {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+
+        /* Mobile responsiveness for the grid */
+        @media (max-width: 768px) {
+            .package-grid {
+                grid-template-columns: 1fr;
+            }
+            aside.package-summary {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="navbar">
+    <div class="nav-container">
+        <a href="webtest1.html" class="logo">Holiday Shores</a>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+        <nav class="nav-links" id="navLinks">
+            <a href="why.html" id="nav-why">Why Us</a>
+            <a href="book.html" id="nav-book">Book</a>
+            <a href="transportations.html" id="nav-transportations">Transportations</a>
+        </nav>
+        <div class="user-actions">
+            <select class="language-selector" id="languageSelector">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+            </select>
+            <button class="btn-signin"><span id="signin-text">Sign In</span></button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <a href="webtest1.html" class="back-link" id="back-link">← Back to Home</a>
+
+    <section class="package-hero">
+        <h1 id="package-detail-title">Bali Summer Escape</h1>
+        <p id="package-detail-subtitle">7 nights in paradise with beachfront resort stays, guided tours, and breakfast included.</p>
+        <div class="package-meta">
+            <span id="meta-duration">7 nights</span>
+            <span id="meta-location">Bali, Indonesia</span>
+            <span id="meta-type">All-Inclusive</span>
+        </div>
+    </section>
+
+    <div class="package-grid">
+        <section class="package-overview">
+            <h2 id="package-summary-title">Package Summary</h2>
+            <video controls autoplay muted loop class="package-video">
+                <source src="summ.mp4" type="video/mp4">
+            </video>
+            <p id="package-summary-desc">
+                Experience Bali's best in one getaway: beachfront luxury, local culture, and guided excursions. 
+                This package includes resort accommodations, breakfast each morning, airport transfers, 
+                and a choice of adventure activities.
+            </p>
+            <div class="package-carousel">
+                <img src="beach.jpg" alt="Bali Beach">
+                <img src="hotel.jpg" alt="Luxury Resort">
+            </div>
+        </section>
+
+        <aside class="package-summary">
+            <h3 id="included-title">What's Included</h3>
+            <p class="price">$1,299</p>
+            <dl>
+                <dt id="label-duration">Duration</dt>
+                <dd id="value-duration">7 nights</dd>
+                <dt id="label-flights">Flights</dt>
+                <dd id="value-flights">Return economy flights included</dd>
+                <dt id="label-accommodation">Accommodation</dt>
+                <dd id="value-accommodation">Luxury beachfront resort</dd>
+                <dt id="label-transfers">Transfers</dt>
+                <dd id="value-transfers">Airport pickup and departure transfer</dd>
+            </dl>
+            <div class="package-features">
+                <h2 id="highlights-title">Highlights</h2>
+                <ul>
+                    <li id="highlight1">Sunrise beach yoga session</li>
+                    <li id="highlight2">Guided Ubud culture tour</li>
+                    <li id="highlight3">Welcome dinner with local cuisine</li>
+                </ul>
+            </div>
+            <button class="btn-primary" style="width:100%; margin-top:1rem;" id="book-package-btn" onclick="window.location.href='book.html'">
+                Book This Package
+            </button>
+        </aside>
+    </div>
+
+    <section class="package-itinerary">
+        <h2 id="itinerary-title">Sample Itinerary</h2>
+        <ul>
+            <li id="day1"><strong>Day 1:</strong> Arrival and welcome dinner.</li>
+            <li id="day2"><strong>Day 2:</strong> Beach relaxation with optional water sports.</li>
+            <li id="day3"><strong>Day 3:</strong> Ubud rice terrace and temple tour.</li>
+            <li id="day4"><strong>Day 4:</strong> Cultural village visit and local market shopping.</li>
+            <li id="day5"><strong>Day 5:</strong> Island tour and sunset dinner.</li>
+            <li id="day6"><strong>Day 6:</strong> Free day for spa or beach time.</li>
+            <li id="day7"><strong>Day 7:</strong> Departure with transfer included.</li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 Holiday Shores | <a href="#">Contact</a> | <a href="#">Follow Us</a></p>
+</footer>
+
+<script src="webtest3.js"></script>
+</body>
+</html>

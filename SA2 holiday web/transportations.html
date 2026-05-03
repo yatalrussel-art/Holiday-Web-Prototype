@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transportations - Holiday Shores</title>
+    <link rel="stylesheet" href="webtest2.css">
+    
+    <style>
+        /* The container that holds all transport boxes */
+        .transport-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        /* Style for individual transport boxes (Flights, Trains, etc.) */
+        .transport-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        /* Makes the box lift slightly when you hover over it */
+        .transport-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        /* Size of the emoji icon */
+        .transport-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        /* Title color inside the cards */
+        .transport-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+        /* Description text color */
+        .transport-card p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="webtest1.html" class="logo">Holiday Shores</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+            <nav class="nav-links" id="navLinks">
+                <a href="why.html" id="nav-why">Why Us</a>
+                <a href="book.html" id="nav-book">Book</a>
+                <a href="transportations.html" id="nav-transportations">Transportations</a>
+            </nav>
+            <div class="user-actions">
+                <select class="language-selector" id="languageSelector" aria-label="Select language">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                </select>
+                <button class="btn-signin" onclick="alert('Sign In page coming soon!')"><span id="signin-text">Sign In</span></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <a href="webtest1.html" class="back-link" id="back-link">← Back to Home</a>
+        
+        <section class="packages">
+            <h2 id="transportations-title">Choose Your Transportation</h2>
+            
+            <div class="transport-grid">
+                
+                <article class="transport-card" onclick="alert('Flight bookings coming soon!')">
+                    <div class="icon">✈️</div>
+                    <h3 id="transport-flights-title">Flights</h3>
+                    <p id="transport-flights-desc">Book flights to destinations worldwide with competitive prices</p>
+                </article>
+
+                <article class="transport-card" onclick="alert('Train bookings coming soon!')">
+                    <div class="icon">🚆</div>
+                    <h3 id="transport-trains-title">Trains</h3>
+                    <p id="transport-trains-desc">Scenic train journeys across Europe and beyond</p>
+                </article>
+
+                <article class="transport-card" onclick="alert('Bus bookings coming soon!')">
+                    <div class="icon">🚌</div>
+                    <h3 id="transport-buses-title">Buses</h3>
+                    <p id="transport-buses-desc">Affordable bus travel for budget-conscious travelers</p>
+                </article>
+
+                <article class="transport-card" onclick="alert('Taxi service coming soon!')">
+                    <div class="icon">🚕</div>
+                    <h3 id="transport-taxi-title">Taxi</h3>
+                    <p id="transport-taxi-desc">Quick and convenient taxi rides for your local travel needs</p>
+                </article>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Holiday Shores | <a href="#">Contact</a> | <a href="#">Follow Us</a></p>
+        <img src="footerimage.png" alt="Footer Image">
+    </footer>
+
+    <script src="webtest3.js"></script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+/* --- Color and Font Settings --- */
+:root {
+    --primary-blue: #003366;
+    --secondary-blue: #006699;
+    --accent-gold: #ffd700;
+    --light-gray: #f5f5f5;
+    --text-color: #333;
+}
+
+/* --- Basic Page Reset --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--text-color); background: var(--light-gray); }
+
+/* --- Top Navigation Bar --- */
+.navbar, .nav-links {
+    background-color: var(--primary-blue);
+    width: 100%;
+}
+
+.navbar { padding: 1rem; position: sticky; top: 0; z-index: 100; color: white; }
+.nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+
+/* --- Logo and Mobile Menu Button --- */
+.logo { font-size: 1.5rem; font-weight: bold; color: var(--accent-gold); text-decoration: none; }
+.menu-toggle { display: block; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+
+/* --- Navigation Links Menu --- */
+.nav-links { display: none; position: absolute; top: 60px; left: 0; right: 0; flex-direction: column; padding: 1rem; gap: 1rem; }
+.nav-links.active { display: flex; }
+.nav-links a { color: white; text-decoration: none; padding: 0.5rem 1rem; }
+
+/* --- Language Selector and Sign In Button --- */
+.user-actions { display: flex; gap: 0.75rem; align-items: center; margin-left: auto; }
+.language-selector { padding: 0.4rem 0.8rem; border: 2px solid var(--accent-gold); border-radius: 4px; background: transparent; color: white; font-weight: 600; cursor: pointer; font-size: 0.9rem; transition: all 0.3s ease; }
+.language-selector:hover { background: var(--accent-gold); color: var(--primary-blue); }
+.language-selector option { background: var(--primary-blue); color: white; }
+.btn-signin { background: transparent; color: white; border: 2px solid var(--accent-gold); padding: 0.4rem 2rem; border-radius: 0px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-size: 0.9rem; }
+.btn-signin:hover { background: var(--accent-gold); color: var(--primary-blue); }
+
+/* --- Transportation Dropdown Settings --- */
+.transport-dropdown { position: static; margin-top : 10px; }
+.transport-trigger {width: 100%; text-align: center;}
+.transport-menu {position: static; width: 100%; box-shadow: none;}
+.transport-option { display: block; width: 100%; padding: 0.75rem 1rem; border: none; background: white; text-align: left; cursor: pointer; color: var(--text-color); }
+.transport-option:hover { background: var(--light-gray); }
+.transport-option.active { background: var(--secondary-blue); color: white; }
+
+/* --- Big Welcome (Hero) Section --- */
+.hero { background: var(--primary-blue); color: white; text-align: center; padding: 4rem 1rem; }
+.hero p { margin-bottom: 2rem; }
+.btn-primary { background: var(--accent-gold); color: var(--primary-blue); border: none; padding: 0.75rem 2rem; border-radius: 4px; cursor: pointer; font-weight: bold; }
+.btn-primary:hover { background: var(--accent-gold); transform: scale(1.05); }
+
+.back-link {
+    display: inline-block;
+    padding: 1rem 2rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --- Section Spacing and Grid Layout --- */
+.packages, .why, .cta { max-width: 1200px; margin: 0 auto; padding: 3rem 1rem; }
+.grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+
+/* --- Package Cards --- */
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card video {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+/* --- Info Boxes (Why Us section) --- */
+.box { background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+
+/* --- General Image Settings --- */
+.image { width: 100%; height: 180px; background-size: cover; background-position: center; }
+
+/* --- Detailed Package Page Header --- */
+.package-hero { background: var(--primary-blue); color: white; text-align: center; padding: 3rem 1rem; }
+.package-hero h1 { margin-bottom: 1rem; font-size: 2.5rem; }
+.package-hero p { max-width: 800px; margin: 0 auto 1.5rem; font-size: 1.1rem; line-height: 1.6; }
+.package-meta { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 1rem; color: #f2f2f2; }
+.package-meta span { background: rgba(255,255,255,0.12); border-radius: 999px; padding: 0.75rem 1rem; font-weight: 600; }
+
+/* --- Detailed Package Page Content Layout --- */
+.package-grid { display: grid; gap: 2rem; padding: 2rem 1rem; max-width: 1200px; margin: 0 auto; grid-template-columns: 1fr; }
+.package-overview, .package-summary, .package-itinerary, .package-features { background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.package-overview video, .package-overview img { width: 100%; border-radius: 8px; display: block; }
+
+/* --- Text Styling inside Package Details --- */
+.package-summary h3, .package-itinerary h2, .package-features h2 { color: var(--primary-blue); margin-bottom: 1rem; }
+.package-summary ul, .package-features ul, .package-itinerary ul { margin-left: 1.2rem; color: #333; }
+.package-summary ul li, .package-features ul li, .package-itinerary ul li { margin-bottom: 0.75rem; }
+.package-summary .price { font-size: 2rem; font-weight: 700; color: var(--primary-blue); margin-bottom: 1rem; }
+.package-summary .book-btn { display: inline-block; margin-top: 1rem; }
+
+/* --- Photo Gallery / Carousel --- */
+.package-carousel { display: grid; gap: 1rem; }
+.package-carousel img { width: 100%; height: auto; border-radius: 8px; object-fit: cover; }
+.package-overview h2 { margin-bottom: 0.75rem; }
+
+/* --- Detail Lists (Price, Location, etc.) --- */
+.package-summary dl { display: grid; gap: 0.75rem; }
+.package-summary dt { font-weight: 700; color: var(--text-color); }
+.package-summary dd { margin: 0; color: #555; }
+
+/* --- Adjustments for Tablets and Computers --- */
+@media (min-width: 768px) {
+    .package-grid { grid-template-columns: 2fr 1fr; }
+    .package-carousel { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+    .package-hero h1 { font-size: 3rem; }
+    .package-grid { gap: 2.5rem; }
+}
+
+/* --- Card Background Photos --- */
+.mountain { background-image: url('hike.jpg'); }
+.summer {background-image: url('summer.jpg'); }
+.cruise { background-image: url('cruise.jpg'); }
+.beach { background-image: url('beach.jpg'); }
+.winter { background-image: url('winter.jpg'); }
+.hotel { background-image: url('hotel.jpg'); }
+
+/* --- Card Text and Buttons --- */
+.card h3 { padding: 15px 10px 5px; font-size: 1.2rem; }
+.card p { padding: 0 15px 15px; color: #666; }
+
+.btn { background: var(--secondary-blue); color: white; border: none; padding: 10px; width: calc(100% - 30px); margin: 10px 15px 20px; border-radius: 4px; cursor: pointer; }
+.btn:first-of-type { margin-top: 20px; }
+.btn:hover { background: var(--primary-blue); }
+
+/* --- Spacing Between Main Sections --- */
+.navbar, .hero, .packages, .why, .cta { margin-bottom: 20px; }
+
+/* --- Footer Area --- */
+footer {
+    background-color: var(--primary-blue);
+    color: white;
+    text-align: center;
+    padding: 48px;
+    position: relative;
+}
+
+footer img {
+    float: right;
+    margin: -119px auto;
+    display: block;
+    width: 300px;
+    height: 300px;
+}
+
+footer a[href="p1"] { color: #00d0ff; text-decoration: none; }
+footer a[href="p2"] { color: #00d0ff; text-decoration: none; }
+
+/* --- Screen Size Adjustments (Responsive Design) --- */
+@media (min-width: 768px) {
+    .menu-toggle { display: none; }
+    .nav-links { display: flex; position: static; flex-direction: row; }
+    .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .menu-toggle {
+        position: absolute; /* Position the toggle button absolutely */
+        top: 10px; /* Adjust the top position as needed */
+        left: 10px; /* Adjust the left position as needed */
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* --- Mobile Phone Footer Fix --- */
+@media (max-width: 600px) {
+    footer img {
+        float: none;
+        margin: 20px auto;
+        max-width: 100%;
+        height: auto;
+    }
+}
+ /* mobile phone sign in button responsiveness */
+    @media (max-width: 600px) {
+    .user-actions {
+        flex-direction: column; /* Stack the language selector and sign-in button vertically */
+        align-items: flex-start; /* Align items to the start of the container */
+    }
+    .btn-signin {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .language-selector {
+        width: auto;
+        padding: 0.4rem 0.8rem;
+    }
+
+}
